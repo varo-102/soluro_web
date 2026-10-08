@@ -1,0 +1,320 @@
+/* style.css */
+:root {
+  --bg-color: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #0A1B39; /* Azul Marino */
+  --text-secondary: #475569;
+  --primary-brand: #0A1B39;
+  --accent-brand: #F0C95C; /* Oro Solar */
+  --accent-hover: #E5B842;
+  --border-color: #E2E8F0;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navbar */
+nav {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+}
+
+.logo-container img {
+  height: 40px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--primary-brand);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-hover);
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-brand);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .hero-content p {
+    margin: 0 auto 2.5rem auto;
+  }
+}
+
+.trust-badges {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(10, 27, 57, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-brand);
+  color: var(--primary-brand);
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 14px 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(240, 201, 92, 0.35);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid var(--primary-brand);
+  color: var(--primary-brand);
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 26px;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(10, 27, 57, 0.05);
+}
+
+@media (max-width: 768px) {
+  .btn-secondary {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-brand);
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(10, 27, 57, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-brand);
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Developer Card */
+.developer-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 6rem auto 4rem auto;
+  box-shadow: 0 10px 30px rgba(10, 27, 57, 0.05);
+}
+
+.dev-avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-brand);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 4px 14px rgba(10, 27, 57, 0.2);
+}
+
+.developer-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-brand);
+  margin-bottom: 0.5rem;
+}
+
+.dev-badge {
+  display: inline-block;
+  background: rgba(10, 27, 57, 0.05);
+  color: var(--primary-brand);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-brand);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--accent-brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Privacy Page Overrides */
+.privacy-container {
+  max-width: 860px;
+  margin: 4rem auto;
+  background: var(--surface);
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.privacy-container h1 {
+  font-size: 2.2rem;
+  color: var(--primary-brand);
+  margin-bottom: 0.5rem;
+}
+
+.privacy-container h2 {
+  font-size: 1.35rem;
+  color: var(--primary-brand);
+  border-left: 4px solid var(--accent-brand);
+  padding-left: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.privacy-container h3 {
+  font-size: 1.1rem;
+  color: var(--primary-brand);
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.privacy-container p, .privacy-container ul {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.highlight-box {
+  background-color: rgba(240, 201, 92, 0.1);
+  border: 1px solid var(--accent-brand);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--primary-brand);
+}
